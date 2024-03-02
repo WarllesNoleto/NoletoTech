@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noleto Dev - Faça já o seu orçamento e crie uma identidade digital para sua empresa</title>
     <meta name="description" content="Somos uma empresa especializada em desenvolvimento web. Faça Já o seu orçamento!">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilo.css">
 </head>
 <body>
-    <header>
-        <picture>
-            <a href="index.html"><img src="assets/Logo Noleto Dev.png" alt="Logo da empresa Noleto Dev"></a>
-        </picture>
+    <header class="cabecalho">
 
-        <ul>
-            <li><a href="#orcamentos" class="orcamentos">Faça Já o Seu orçamento</a></li>
-        </ul>
+            <div>
+                <a href="index.html" class="logo">Noleto Dev</a>
+                <a href="#orcamentos" class="orcamentos">Faça Já o Seu orçamento!</a>
+            </div>
+ 
     </header>
 
-    <main>
+    <main class="container">
         <section>
             <h1>Precisando de um <span class="destaque-titulo">site</span> ou <span class="destaque-titulo">site com sistema de agendamento</span>?</h1>
             <p>
@@ -39,6 +41,17 @@
                 <li>Quero um sistema para Fazer X,Y,Z</li>
             </ul>
         </section>
+        <form action="#" class="formulario">
+            <label>Nome</label>
+            <input type="text" name="nome">
+            <label>Telefone</label>
+            <input type="tel" name="telefone">
+            <label>E-mail</label>
+            <input type="email" name="e-mail">
+            <label>Como podemos te ajudar?</label>
+            <textarea name="solicitacao-de-orcamento"></textarea>
+            <p><span class="paragrafo-formulario">Descreva exatamente o que está buscando. Quanto mais detalhes, mais rápido conseguimos te dar um retorno. Descrições vagas demais irão atrasar muito o processo de te entregar uma solução</span></p>
+        </form>
     </main>
 </body>
 </html>
