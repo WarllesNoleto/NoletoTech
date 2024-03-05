@@ -3,12 +3,12 @@
 :root {
     --cor-principal: #f28705;
     --cor-secundaria: #d96704;
-    --cor-terciaria: #f29f05;
+    --cor-terciaria: #ff9900;
     --cor-contraste: #05486d;
     --cor-01: #f2f2f2;
     --cor-02: #000000;
    
-    --fonte-principal: "Inter", sans-serif;
+    --fonte-principal: "Roboto", sans-serif;
 }
 
 * {
@@ -18,3 +18,113 @@
 
     font-family: var(--fonte-principal);
 }
+/* cabecalho */
+.cabecalho {
+    background-color: var(--cor-contraste);
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 2px solid var(--cor-secundaria);
+}
+.logo {
+    color: var(--cor-02);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 34px;
+    text-shadow: 2px 2px 2px var(--cor-principal);
+}
+
+.destaque-logo {
+    color: var(--cor-secundaria
+    );
+    text-shadow: 2px 2px 2px var(--cor-02);
+}
+
+/* Botão Neon */
+.link-orcamentos {
+    margin: 15px 0px;
+
+    padding: 15px 45px;
+    font-size: 20px;
+    background: transparent;
+    border: 2px solid var(--cor-terciaria);
+    border-radius: 35px;
+    color: var(--cor-terciaria);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    animation: piscar 1.5s infinite;
+}
+
+.link-orcamentos:hover {
+    box-shadow: 0 0 15px var(--cor-terciaria), inset 0 0 15px var(--cor-terciaria);
+    text-shadow:  0 0 15px var(--cor-terciaria);
+}
+
+@keyframes piscar {
+    0%, 100% { box-shadow: 0 0 15px var(--cor-terciaria), inset 0 0 15px var(--cor-terciaria);
+        text-shadow:  0 0 15px var(--cor-terciaria); }
+
+    50% { box-shadow: 0 0 5px var(--cor-terciaria), inset 0 0 5px var(--cor-terciaria);
+        text-shadow:  0 0 5px var(--cor-terciaria); }
+
+    75% { box-shadow: 0 0 7.5px var(--cor-terciaria), inset 0 0 7.5px var(--cor-terciaria);
+        text-shadow:  0 0 7.5px var(--cor-terciaria); }
+  }
+
+  /* Corpo */
+
+  .container {
+    background-image: url(../img/background.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: blur(10px); /* Adiciona o efeito de desfoque */
+    color: var(--cor-01);
+    padding: 15px 25px;
+  }
+
+  .container-textos {
+    background-color: var(--cor-secundaria);
+    box-shadow: 10px 10px 10px black;
+    border-radius: 15px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 55px;
+  }
+
+  .destaque-titulo {
+    background-image: linear-gradient(180deg, #05486d 23%, #0183c9 90%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  p {
+    text-align: justify;
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  ul {
+    padding: 25px;
+  }
+
+  li {
+    margin-bottom: 15px;
+  }

@@ -7,44 +7,47 @@
     <meta name="description" content="Somos uma empresa especializada em desenvolvimento web. Faça Já o seu orçamento!">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilo.css">
 </head>
 <body>
     <header class="cabecalho">
-
-            <div>
-                <a href="index.html" class="logo">Noleto Dev</a>
-                <a href="#orcamentos" class="orcamentos">Faça Já o Seu orçamento!</a>
-            </div>
- 
+        <a href="index.html" class="logo">Noleto <span class="destaque-logo">Dev</span></a>
+        <a href="#orcamentos"><button  class="link-orcamentos">Faça Seu orçamento!</button></a>
     </header>
 
     <main class="container">
-        <section>
-            <h1>Precisando de um <span class="destaque-titulo">site</span> ou <span class="destaque-titulo">site com sistema de agendamento</span>?</h1>
+        <section class="container-textos">
+            <h1>Precisando de um <span class="destaque-titulo">site</span> ou <span class="destaque-titulo">sistema de agendamento</span>?</h1>
             <p>
-                Sou um desenvolvedor autônomo especializado na criação de sites e sistemas de agendamento. Qualquer solicitação de orçamento que você enviar será tratada diretamente por mim. Você receberá propostas personalizadas e poderá escolher aquela que melhor se adequar às suas necessidades.
+                Sou um desenvolvedor autônomo especializado na criação de sites e sistemas de agendamento. Qualquer solicitação de orçamento que você enviar será tratada diretamente por mim. Você receberá propostas de direferentes preços e poderá escolher aquela que melhor se adequar às suas necessidades.
             </p>
         </section>
 
         <section>
             <h2>Como pedir um orçamento?</h2>
-            <h3>✅Precisa de um site?</h3>
-            <ul>
-                <li>Por favor, forneça uma descrição detalhada do tipo de site que você necessita. Isso pode incluir uma landing page, um portfólio, um site com múltiplas páginas, ou qualquer outra especificação que seja relevante para atender às suas necessidades. Quanto mais detalhes você puder fornecer sobre o modelo desejado, mais precisamente poderemos desenvolver uma solução que atenda às suas expectativas e objetivos.</li>
-                <li>Mencione sites que tenham o modelo que te agrada!</li>
-            </ul>
-            <h3>✅Precisa de um site com sistema de agendamento?</h3>
-            <ul>
-                <li>Por favor, forneça uma descrição detalhada do modelo de site que você necessita, incluindo quais funcionalidades específicas você deseja incorporar. Além disso, descreva a função desejada para o formulário, detalhando quais dados você gostaria de coletar por meio do mesmo. Essas informações serão fundamentais para garantir que o site atenda precisamente às suas exigências e requisitos.</li>
-                <li>Quero um sistema para Fazer X,Y,Z</li>
-            </ul>
+            <section class="container-textos">
+                <h3>✅Precisa de um site?</h3>
+                <ul>
+                    <li>Por favor, forneça uma descrição detalhada do tipo de site que você necessita. Isso pode incluir uma landing page, um portfólio, um site com múltiplas páginas, ou qualquer outra especificação que seja relevante para atender às suas necessidades. Quanto mais detalhes você puder fornecer sobre o modelo desejado, mais precisamente poderemos desenvolver uma solução que atenda às suas expectativas e objetivos.</li>
+                    <li>Mencione sites que tenham o modelo que te agrada!</li>
+                </ul>
+            </section>
+
+            <section class="container-textos">
+                <h3>✅Precisa de um site com sistema de agendamento?</h3>
+                <ul>
+                    <li>Por favor, forneça uma descrição detalhada do modelo de site que você necessita, incluindo quais funcionalidades específicas você deseja incorporar. Além disso, descreva a função desejada para o formulário, detalhando quais dados você gostaria de coletar por meio do mesmo. Essas informações serão fundamentais para garantir que o site atenda precisamente às suas exigências e requisitos.</li>
+                    <li>Quero um sistema para Fazer X,Y,Z</li>
+                </ul>
+            </section>
         </section>
-        <form action="index.html" class="formulario">
-            <label>Nome</label>
-            <input type="text" name="nome" required placeholder="Digite o seu nome completo...">
-            <label>Telefone</label>
+        <form action="index.html" class="formulario" id="orcamentos">
+            <div>
+                <label>Nome</label>
+                <input type="text" name="nome" required placeholder="Digite o seu nome completo...">
+                <label>Telefone</label>
+            </div>
             <input type="tel" name="telefone" placeholder="Número com DDD">
             <label>E-mail</label>
             <input type="email" name="e-mail" required placeholder="Seu e-mail">
