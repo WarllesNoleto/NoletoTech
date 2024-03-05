@@ -9,6 +9,7 @@
     --cor-contraste: #d96704;
    
     --fonte-principal: "Poppins", sans-serif;
+    --fonte-logo: "Anta", sans-serif;
 }
 
 * {
@@ -18,4 +19,97 @@
 
     font-family: var(--fonte-principal);
 }
+
+a {
+    color: var(--cor-05);
+    text-decoration: none;
+ 
+    font-weight: 700;
+}
+
+p {
+    text-align: justify;
+}
+
+ul {
+    text-align: justify;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    background-color: var(--cor-01);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: var(--cor-05);
+
+    scroll-behavior: smooth;
+}
+
 /* cabecalho */
+.header {
+    padding: 25px;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+
+    border-bottom: 3px solid var(--cor-contraste);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.527);
+}
+
+/* Logo */
+
+.logo {
+    font-size: 24px;
+    font-family: var(--fonte-logo);
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px var(--cor-contraste);
+}
+
+.destaque-logo {
+    color: var(--cor-contraste);
+    text-shadow: 2px 2px 2px var(--cor-contraste);
+}
+
+/* botao de fazer orçamento */
+
+.botao-destaque {
+    padding: 5px 15px;
+    font-size: 20px;
+    background-color: transparent;
+    color: var(--cor-contraste);
+    border: 1px solid var(--cor-contraste);
+    transition: all 0.3s ease-in-out;
+}
+
+.botao-destaque:hover {
+    box-shadow: 0 0 15px var(--cor-contraste), inset 0 0 15px var(--cor-contraste);
+    text-shadow: 0 0 15px var(--cor-contraste);
+}
+
+/* container contudo principal */
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+
+    padding: 25px;
+}
+
+/* Título */
+
+.container-titulo {
+    
+}
+
+.destaque-titulo {
+    background-image: linear-gradient(341deg, #07FFE1 23%, #524add 90%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
