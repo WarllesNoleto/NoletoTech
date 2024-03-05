@@ -5,8 +5,9 @@
     --cor-secundaria: #d96704;
     --cor-terciaria: #ff9900;
     --cor-contraste: #05486d;
+    --cor-contraste-neon: #00d9ffce;
     --cor-01: #f2f2f2;
-    --cor-02: #000000;
+    --cor-02: #000000;-neon
    
     --fonte-principal: "Roboto", sans-serif;
 }
@@ -127,4 +128,62 @@
 
   li {
     margin-bottom: 15px;
+  }
+
+  /* formulario */
+
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-secundaria);
+    padding: 25px;
+  }
+
+  .formulario input {
+    width: 100%;
+    border-radius: 8px;
+    padding: 5px;
+  }
+
+.formulario textarea {
+    width: 100%;
+    line-height: 25px;
+
+    border-radius: 8px;
+    padding: 5px;
+
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.562);
+}
+
+
+/* neon botão formulario */
+.enviar-formulario {
+    margin: 15px 0px;
+
+    padding: 15px 45px;
+    font-size: 20px;
+    background: transparent;
+    border: 2px solid var(--cor-contraste-neon);
+    border-radius: 35px;
+    color: var(--cor-contraste-neon);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    animation: piscar 1.5s infinite;
+}
+
+.enviar-formulario:hover {
+    box-shadow: 0 0 15px var(--cor-contraste-neon), inset 0 0 15px var(--cor-contraste-neon);
+    text-shadow:  0 0 15px var(--cor-contraste-neon);
+}
+
+@keyframes piscar{
+    0%, 100% { box-shadow: 0 0 15px var(--cor-contraste-neon), inset 0 0 15px var(--cor-contraste-neon);
+        text-shadow:  0 0 15px var(--cor-contraste-neon); }
+
+    50% { box-shadow: 0 0 5px var(--cor-contraste-neon), inset 0 0 5px var(--cor-contraste-neon);
+        text-shadow:  0 0 5px var(--cor-contraste-neon); }
+
+    75% { box-shadow: 0 0 7.5px var(--cor-contraste-neon), inset 0 0 7.5px var(--cor-contraste-neon);
+        text-shadow:  0 0 7.5px var(--cor-contraste-neon); }
   }
