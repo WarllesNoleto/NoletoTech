@@ -2,10 +2,10 @@
 // Verifica se os dados foram submetidos
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Dados do formulário
-    $nome = $_POST['nome'];
-    $telefone = $_POST['telefone'];
-    $email = $_POST['email'];
-    $solicitacao = $_POST['solicitacao-de-orcamentos'];
+    $nome = limpar_dados($_POST['nome']);
+    $telefone = limpar_dados($_POST['telefone']);
+    $email = limpar_dados($_POST['email']);
+    $solicitacao = limpar_dados($_POST['solicitacao-de-orcamentos']);
 
     // Configurações do banco de dados
     $servername = "localhost";
@@ -21,17 +21,28 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         die("Conexão falhou: " . $conn->connect_error);
     }
 
-    // Prepara a consulta SQL
-    $sql = "INSERT INTO solicitacao_de_orcamentos (nome, telefone, email, solicitacao) VALUES ('$nome', '$telefone', '$email', '$solicitacao')";
+    // Prepara a consulta SQL usando prepared statement
+    $sql = "INSERT INTO solicitacao_de_orcamentos (nome, telefone, email, solicitacao) VALUES (?, ?, ?, ?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ssss", $nome, $telefone, $email, $solicitacao);
 
     // Executa a consulta
-    if ($conn->query($sql) === TRUE) {
+    if ($stmt->execute()) {
         echo "Orçamento enviado com sucesso!";
     } else {
         echo "Erro ao enviar o orçamento: " . $conn->error;
     }
 
     // Fecha a conexão com o banco de dados
+    $stmt->close();
     $conn->close();
+}
+
+// Função para limpar os dados
+function limpar_dados($dados) {
+    $dados = trim($dados);
+    $dados = stripslashes($dados);
+    $dados = htmlspecialchars($dados);
+    return $dados;
 }
 ?>
