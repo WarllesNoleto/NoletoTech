@@ -1,32 +1,37 @@
 <?php
-// Configurações do banco de dados
-$servername = "localhost";
-$username = "seu_usuario";
-$password = "sua_senha";
-$dbname = "seu_banco_de_dados";
+// Verifica se os dados foram submetidos
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Dados do formulário
+    $nome = $_POST['nome'];
+    $telefone = $_POST['telefone'];
+    $email = $_POST['email'];
+    $solicitacao = $_POST['solicitacao-de-orcamentos'];
 
-// Conexão com o banco de dados usando PDO
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // Define o modo de erro do PDO para exceção
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    // Configurações do banco de dados
+    $servername = "localhost";
+    $username = "root"; // seu nome de usuário do MySQL
+    $password = ""; // sua senha do MySQL
+    $dbname = "noletodev"; // nome do seu banco de dados
 
-    // Prepara a consulta SQL para inserir os dados do formulário na tabela "Orcamentos"
-    $stmt = $conn->prepare("INSERT INTO Orcamentos (nome, telefone, email, solicitacao) VALUES (:nome, :telefone, :email, :solicitacao)");
-    
-    // Associa os valores do formulário aos parâmetros da consulta SQL
-    $stmt->bindParam(':nome', $_POST['nome']);
-    $stmt->bindParam(':telefone', $_POST['telefone']);
-    $stmt->bindParam(':email', $_POST['email']);
-    $stmt->bindParam(':solicitacao', $_POST['solicitacao-de-orcamento']);
-    
-    // Executa a consulta SQL
-    $stmt->execute();
+    // Conectando ao banco de dados
+    $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Redireciona de volta para a página inicial após o envio do formulário
-    header("Location: index.html");
-    exit();
-} catch(PDOException $e) {
-    echo "Erro de conexão com o banco de dados: " . $e->getMessage();
+    // Verifica conexão
+    if ($conn->connect_error) {
+        die("Conexão falhou: " . $conn->connect_error);
+    }
+
+    // Prepara a consulta SQL
+    $sql = "INSERT INTO solicitacao_de_orcamentos (nome, telefone, email, solicitacao) VALUES ('$nome', '$telefone', '$email', '$solicitacao')";
+
+    // Executa a consulta
+    if ($conn->query($sql) === TRUE) {
+        echo "Orçamento enviado com sucesso!";
+    } else {
+        echo "Erro ao enviar o orçamento: " . $conn->error;
+    }
+
+    // Fecha a conexão com o banco de dados
+    $conn->close();
 }
 ?>
