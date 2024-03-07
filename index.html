@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos/estilo.css">
+    <link rel="stylesheet" href="media-query.css">
 </head>
 <body>
     <header class="header">
@@ -20,49 +21,57 @@
     </header>
 
     <main class="container">
-        <section class="container-titulo">
+        <section class="container-textos container-titulo">
             <h1>Precisando de um <span class="destaque-titulo">site</span> ou <span class="destaque-titulo">sistema de agendamento</span>?</h1>
             <p>
                 Sou um desenvolvedor autônomo especializado na criação de sites e sistemas de agendamento. Qualquer solicitação de orçamento que você enviar será tratada diretamente por mim. Você receberá propostas de direferentes preços e poderá escolher aquela que melhor se adequar às suas necessidades.
             </p>
         </section>
 
-        <section>
-            <h2>Como pedir um orçamento?</h2>
+        <section class="container-texto-formulario">
             <section class="container-textos">
-                <h3>✅ Precisa de um site?</h3>
-                <ul>
-                    <li>➡ Por favor, descreva o tipo de site que você precisa. Isso pode incluir uma página inicial, um portfólio, um site de várias páginas, ou quaisquer outras especificações relevantes. Quanto mais detalhes você fornecer, melhor podemos desenvolver uma solução que atenda às suas expectativas.</li>
-                    <li>➡ Mencione sites que tenham o modelo que te agrada!</li>
-                </ul>
+                <h2>Como pedir um orçamento?</h2>
+            
+                    <h3>✅ Precisa de um site?</h3>
+                    <ul>
+                        <li>➡ Por favor, descreva o tipo de site que você precisa. Isso pode incluir uma página inicial, um portfólio, um site de várias páginas, ou quaisquer outras especificações relevantes. Quanto mais detalhes você fornecer, melhor podemos desenvolver uma solução que atenda às suas expectativas.</li>
+                        <li>➡ Mencione sites que tenham o modelo que te agrada!</li>
+                    </ul>
+            
+                    <h3>✅ Precisa de um site com sistema de agendamento?</h3>
+                    <ul>
+                        <li>➡ Por favor, descreva o modelo de site que você precisa, incluindo as funcionalidades específicas que deseja. Além disso, explique o propósito do formulário e quais informações você gostaria de coletar por meio dele. Esses detalhes são essenciais para garantir que o site atenda exatamente às suas necessidades.</li>
+                        <br>
+                        <li>➡ Quero um sistema para Fazer X,Y,Z</li>
+                    </ul>
+            
             </section>
-
-            <section class="container-textos">
-                <h3>✅ Precisa de um site com sistema de agendamento?</h3>
-                <ul>
-                    <li>➡ Por favor, descreva o modelo de site que você precisa, incluindo as funcionalidades específicas que deseja. Além disso, explique o propósito do formulário e quais informações você gostaria de coletar por meio dele. Esses detalhes são essenciais para garantir que o site atenda exatamente às suas necessidades.</li>
-                    <li>➡ Quero um sistema para Fazer X,Y,Z</li>
-                </ul>
-            </section>
+            <form action="pedir-orçamento.php" method="post" class="formulario" id="orcamentos">
+            
+                <div class="conteudo-formulario">
+                    <label>Nome <span class="destaque-label">*</span></label>
+                    <input type="text" name="nome" required placeholder="Digite o seu nome completo..." class="caixa-de-dados-formulario">
+                </div>
+                <div class="conteudo-formulario">
+                    <label>Telefone <span class="destaque-label">*</span></label>
+                    <input type="tel" name="telefone" placeholder="Número com DDD" class="caixa-de-dados-formulario">
+                </div>
+            
+                <div class="conteudo-formulario">
+                    <label>E-mail <span class="destaque-label">*</span></label>
+                    <input type="email" name="email" required placeholder="Seu e-mail" class="caixa-de-dados-formulario">
+                </div>
+                <div class="conteudo-formulario">
+                    <label>Como podemos te ajudar? <span class="destaque-label">*</span></label>
+                    <textarea name="solicitacao-de-orcamentos" required placeholder="Descreva aqui os detalhes do que você deseja..." cols="30" rows="5" class="caixa-de-dados-formulario"></textarea>
+                </div>
+                <p><span class="paragrafo-formulario">Descreva exatamente o que está buscando. Quanto mais detalhes, mais rápido conseguimos te dar um retorno. Descrições vagas demais irão atrasar muito o processo de te entregar uma solução</span></p>
+                <button type="submit" class="botao-formulario">Pedir Orçamento</button>
+            </form>
         </section>
-
-        <form action="pedir-orçamento.php" method="post" class="formulario" id="orcamentos">
-            <div>
-                <label>Nome</label>
-                <input type="text" name="nome" required placeholder="Digite o seu nome completo...">
-                <label>Telefone</label>
-                <input type="tel" name="telefone" placeholder="Número com DDD">
-            </div>          
-            <label>E-mail</label>
-            <input type="email" name="email" required placeholder="Seu e-mail">
-            <label>Como podemos te ajudar?</label>
-            <textarea name="solicitacao-de-orcamentos" required placeholder="Descreva aqui os detalhes do que você deseja..."></textarea>
-            <p><span class="paragrafo-formulario">Descreva exatamente o que está buscando. Quanto mais detalhes, mais rápido conseguimos te dar um retorno. Descrições vagas demais irão atrasar muito o processo de te entregar uma solução</span></p>
-            <button type="submit" class="enviar-formulario enviar">Pedir Orçamento</button>
-        </form>
     </main>
 
-    <footer>
+    <footer class="footer">
         <p>Todos os direitos reservados</p>
         <p class="destaque-footer">Termos de privacidade - Todos os direitos reservados – Termos de Uso</p>
     </footer>

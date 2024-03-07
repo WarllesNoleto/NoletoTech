@@ -1,0 +1,28 @@
+@media screen and (min-width: 1024px) {
+    .container {
+        min-width: 1024px;
+        gap: 50px;
+        margin-bottom: 25px;
+    }
+
+    .container-texto-formulario {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    .formulario {
+        max-width: 60%;
+    }
+
+    .container-textos {
+        max-width: 40%;
+    }
+
+    .container-titulo {
+        max-width: 600px;
+        margin-top: 25px;
+    }
+
+}
