@@ -140,6 +140,12 @@ html {
     gap: 25px;
 }
 
+.nome-telefone {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
 .conteudo-formulario{
     display: flex;
     flex-direction: column;

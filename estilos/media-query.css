@@ -5,6 +5,7 @@
         width: 100%;
         gap: 50px;
         margin-bottom: 25px;
+        padding: 50px;
     }
 
     .container-texto-formulario {
@@ -27,4 +28,14 @@
         margin-top: 25px;
     }
 
+    .nome-telefone {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .conteudo-formulario {
+        width: 100%;
+    }
 }

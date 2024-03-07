@@ -48,22 +48,24 @@
             </section>
             <form action="pedir-orçamento.php" method="post" class="formulario" id="orcamentos">
             
-                <div class="conteudo-formulario">
-                    <label>Nome <span class="destaque-label">*</span></label>
-                    <input type="text" name="nome" required placeholder="Digite o seu nome completo..." class="caixa-de-dados-formulario">
-                </div>
-                <div class="conteudo-formulario">
-                    <label>Telefone <span class="destaque-label">*</span></label>
-                    <input type="tel" name="telefone" placeholder="Número com DDD" class="caixa-de-dados-formulario">
+                <div class="nome-telefone">
+                    <div class="conteudo-formulario">
+                        <label>Nome: <span class="destaque-label">*</span></label>
+                        <input type="text" name="nome" required placeholder="Digite o seu nome completo..." class="caixa-de-dados-formulario">
+                    </div>
+                    <div class="conteudo-formulario">
+                        <label>Telefone: <span class="destaque-label">*</span></label>
+                        <input type="tel" name="telefone" placeholder="Número com DDD" class="caixa-de-dados-formulario">
+                    </div>
                 </div>
             
                 <div class="conteudo-formulario">
-                    <label>E-mail <span class="destaque-label">*</span></label>
+                    <label>E-mail: <span class="destaque-label">*</span></label>
                     <input type="email" name="email" required placeholder="Seu e-mail" class="caixa-de-dados-formulario">
                 </div>
                 <div class="conteudo-formulario">
                     <label>Como podemos te ajudar? <span class="destaque-label">*</span></label>
-                    <textarea name="solicitacao-de-orcamentos" required placeholder="Descreva aqui os detalhes do que você deseja..." cols="30" rows="5" class="caixa-de-dados-formulario"></textarea>
+                    <textarea name="solicitacao_orcamento" required placeholder="Descreva aqui os detalhes do que você deseja..." cols="30" rows="5" class="caixa-de-dados-formulario"></textarea>
                 </div>
                 <p><span class="paragrafo-formulario">Descreva exatamente o que está buscando. Quanto mais detalhes, mais rápido conseguimos te dar um retorno. Descrições vagas demais irão atrasar muito o processo de te entregar uma solução</span></p>
                 <button type="submit" class="botao-formulario">Pedir Orçamento</button>
