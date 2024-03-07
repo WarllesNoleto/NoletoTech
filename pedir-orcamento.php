@@ -4,7 +4,7 @@
 $nome = $_POST["nome"];
 $telefone = $_POST["telefone"];
 $email = $_POST["email"];
-$solicitacao_orcamento = $_POST["solicitacao_orcamento"];
+$orcamento = $_POST["orcamento"];
 $data_atual = date("d/m/Y");
 $hora_atual = date("H:i:s");
 
@@ -12,19 +12,19 @@ $hora_atual = date("H:i:s");
 $server = "localhost";
 $usuario = "root";
 $senha = "";
-$banco = "noleto_tech";
+$banco = "noletotech";
 
 //CONEXÃO COM BANCO DE DADOS
-$conn = new mysqli($server, $usuario, $senha , $banco);
+$conexao = new mysqli($server, $usuario, $senha, $banco);
 
 
 //VERFIFICAR CONEXÃO
-if ($conn->connect_error) {
-    die("Falha ao se comunicar com banco de dados: ". $conn->connect_error);
+if ($conexao->connect_error) {
+    die("Falha ao se comunicar com banco de dados: ". $conexao->connect_error);
 }
 
-$smtp = $conn->prepare("INSERT INTO  solicitacao_de_orcamentos (nome, telefone, email, solicitacao_orcamento, data, hora) VALUES (?,?,?,?,?,?)");
-$smtp->bind_param("ssssss", $nome, $telefone, $email, $solicitacao_orcamento, $data_atual, $hora_atual);
+$smtp = $conexao->prepare("INSERT INTO orcamentos (nome, telefone, email, orcamento, data, hora) VALUES (?,?,?,?,?,?)");
+$smtp->bind_param("ssssss", $nome, $telefone, $email, $orcamento, $data_atual, $hora_atual);
 
 if ($smtp->execute()){
     echo"Mensagem Enviada com sucesso!";
@@ -33,6 +33,6 @@ if ($smtp->execute()){
 }
 
 $smtp->close();
-$conn->close();
+$conexao->close();
 
 ?>

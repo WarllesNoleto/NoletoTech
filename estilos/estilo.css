@@ -181,6 +181,7 @@ html {
     font-size: 20px;
     transition: .2s;
     text-shadow: 1px 1px 1px var(--cor-02);
+    cursor: pointer;
 }
 
 .botao-formulario:hover {
