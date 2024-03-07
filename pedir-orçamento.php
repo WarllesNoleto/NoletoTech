@@ -12,7 +12,7 @@ $hora_atual = date("H:i:s");
 $server = "localhost";
 $usuario = "root";
 $senha = "";
-$banco = "noleto_tech"
+$banco = "noleto_tech";
 
 //CONEXÃO COM BANCO DE DADOS
 $conn = new mysqli($server, $usuario, $senha , $banco);
@@ -34,3 +34,5 @@ if ($smtp->execute()){
 
 $smtp->close();
 $conn->close();
+
+?>
