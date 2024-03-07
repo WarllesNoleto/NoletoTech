@@ -124,7 +124,7 @@ html {
 }
 
 .destaque-titulo {
-    background-image: linear-gradient(90deg, #A5A692 23%, #BFB78F 90%);
+    background-image: linear-gradient(360deg, #F2A71B 23%, #be7301 90%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -167,18 +167,20 @@ html {
 .botao-formulario {
     border-radius: 10px;
     padding: 10px;
-    background-color: var(--cor-03);
+    background-color: var(--cor-contraste);
     border: none;
     color: var(--cor-01);
     font-weight: 700;
     text-transform: uppercase;
     font-size: 20px;
     transition: .2s;
+    text-shadow: 1px 1px 1px var(--cor-02);
 }
 
 .botao-formulario:hover {
-    background-color: #42423c;
-    color: var(--cor-05);
+    background-color: var(--cor-04);
+    color: var(--cor-02);
+    text-shadow: 1px 1px 1px var(--cor-01);
 }
 
 /* footer */
