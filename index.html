@@ -47,8 +47,8 @@
             
             </section>
             
-            <form action="pedir-orcamento.php" method="post" class="formulario" id="orcamentos">
-            
+            <form action="pedir-orcamento.php" method="post" class="formulario" id="orcamento-form">
+
                 <div class="nome-telefone">
                     <div class="conteudo-formulario">
                         <label>Nome: <span class="destaque-label">*</span></label>
@@ -69,7 +69,8 @@
                     <textarea name="solicitacao" placeholder="Descreva aqui os detalhes do que você deseja..." required cols="30" rows="5" class="caixa-de-dados-formulario"></textarea>
                 </div>
                 <p><span class="paragrafo-formulario">Descreva exatamente o que está buscando. Quanto mais detalhes, mais rápido conseguimos te dar um retorno. Descrições vagas demais irão atrasar muito o processo de te entregar uma solução</span></p>
-                <button type="submit" class="botao-formulario">Pedir Orçamento</button>
+                <button type="submit" class="botao-formulario" id="botao-enviar">Pedir Orçamento</button>
+
             </form>
         </section>
     </main>
@@ -79,4 +80,47 @@
         <p class="destaque-footer">Termos de privacidade - Todos os direitos reservados – Termos de Uso</p>
     </footer>
 </body>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('orcamento-form').addEventListener('submit', function(event) {
+        // Prevenir o envio padrão do formulário
+        event.preventDefault();
+    
+        // Selecionar o botão de envio
+        var botaoEnviar = document.getElementById('botao-enviar');
+    
+        // Alterar a cor do botão para verde
+        botaoEnviar.style.backgroundColor = 'green';
+    
+        // Alterar o texto do botão
+        botaoEnviar.innerText = 'Enviado com sucesso!';
+    
+        // Criar um objeto FormData para enviar os dados do formulário
+        var formData = new FormData(this);
+    
+        // Criar uma requisição AJAX
+        var xhr = new XMLHttpRequest();
+    
+        // Configurar a requisição
+        xhr.open('POST', 'pedir-orcamento.php', true);
+    
+        // Configurar o callback quando a requisição estiver completa
+        xhr.onload = function() {
+          // Verificar se a requisição foi bem-sucedida
+          if (xhr.status >= 200 && xhr.status < 300) {
+            // Limpar o formulário ou realizar outras ações, se necessário
+            document.getElementById('orcamento-form').reset();
+          } else {
+            // Exibir uma mensagem de erro, se necessário
+            console.error('Erro no envio do formulário:', xhr.statusText);
+          }
+        };
+    
+        // Enviar a requisição com os dados do formulário
+        xhr.send(formData);
+      });
+    });
+</script>
+    
 </html>
