@@ -111,6 +111,11 @@
           if (xhr.status >= 200 && xhr.status < 300) {
             // Limpar o formulário ou realizar outras ações, se necessário
             document.getElementById('orcamento-form').reset();
+            
+            // Recarregar a página após 5 segundos
+            setTimeout(function() {
+              window.location.reload();
+            }, 5000); // Tempo em milissegundos (5 segundos)
           } else {
             // Exibir uma mensagem de erro, se necessário
             console.error('Erro no envio do formulário:', xhr.statusText);
