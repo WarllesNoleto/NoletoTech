@@ -7,7 +7,11 @@ $telefone = $_POST['telefone'];
 $email = $_POST['email'];
 $solicitacao = $_POST['solicitacao'];
 $data_atual = date('d/m/Y');
-$hora_atual = date('H:i:s');
+
+//HORA ATUAL DE BRSÍLIA
+$dateTime = new DateTime('now', new DateTimeZone('America/Sao_Paulo'));
+$hora_atual = $dateTime->format('H:i:s');
+
 
 $smtp = $conn->prepare("INSERT INTO  orcamentos (nome, telefone, email, solicitacao, data, hora) VALUES (?,?,?,?,?,?)");
 $smtp->bind_param("ssssss", $nome, $telefone, $email, $solicitacao, $data_atual, $hora_atual);
