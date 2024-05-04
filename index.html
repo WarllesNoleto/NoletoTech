@@ -4,12 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noleto Tech</title>
+    <link rel="stylesheet" href="estilo/geral.css">
+    <link rel="stylesheet" href="estilo/cabecalho.css">
+    <link rel="stylesheet" href="estilo/banner.css">
+    <link rel="stylesheet" href="estilo/servicos.css">
 </head>
 <body>
-    <header>
-        <nav>
+    <header class="cabecalho limitar-secao" id="home">
+        <nav class="navegacao">
             <a href="index.html"><img src="img/logo.png" alt="Logo da empresa Noleto Tech"></a>
-            <ul>
+            <ul class="menu">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#quemsomos">Quem somos</a></li>
@@ -19,154 +23,161 @@
         </nav>
     </header>
 
-    <section>
-        <picture>
-            <!--Aqui vai o Banner-->
-        </picture>
-        <div>
-            <h1>Seu negócio na era digital!</h1>
-            <p>
-                Websites personalizados e automação para maximizar seu alcance.
-            </p>
-            <a href="#contato">Faça um orçamento</a>
-        </div>
-    </section>
-
-    <section>
-        <div>
-            <h2>Serviços</h2>
-            <p>Websites Personalizados e Automação para Maximizar seu Alcance.</p>
-        </div>
-        <div>
-            <div>
-                <img src="img/icone-1.png" alt="icone web">
-                <h3>Desenvolvimento de Site personalizados</h3>
+    <main>
+        <section class="banner limitar-secao"> <!--Aqui vai o Banner-->
+            <div class="texto-banner">
+                <h1>Seu negócio na era digital!</h1>
                 <p>
-                    Desenvolvemos sites sob medida para o seu negócio. Cada detalhe é pensado para refletir sua marca e atender suas necessidades específicas. Criamos sites visualmente atraentes, funcionais e otimizados para dispositivos móveis. Nossa equipe trabalha para garantir que seu site ofereça uma experiência envolvente e eficaz para seus visitantes. Se você quer um site que destaque sua empresa e gere resultados, estamos prontos para ajudar.
+                    Websites personalizados e automação para <br> maximizar seu alcance.
+                </p>
+                <a href="#contato" class="link-banner">Faça um orçamento</a>
+            </div>
+        </section>
+
+        <section id="servicos" class="servicos limitar-secao">
+            <div class="texto-servicos">
+                <h2>Serviços</h2>
+                <p>Websites Personalizados e Automação para Maximizar seu Alcance.</p>
+            </div>
+            <div class="container-servicos">
+                <div class="card-servicos">
+                    <div class="container-img-servicos">
+                        <img src="img/icone-1.png" alt="icone web">
+                    </div>
+                    <div class="card-textos">
+                        <h3>Desenvolvimento de <br> Site personalizados</h3>
+                        <p>
+                            Desenvolvemos sites sob medida para o seu negócio. Cada detalhe é pensado para refletir sua marca e atender suas necessidades específicas. Criamos sites visualmente atraentes, funcionais e otimizados para dispositivos móveis. Nossa equipe trabalha para garantir que seu site ofereça uma experiência envolvente e eficaz para seus visitantes. Se você quer um site que destaque sua empresa e gere resultados, estamos prontos para ajudar.
+                        </p>
+                    </div>
+                </div>
+                <div class="card-servicos">
+                    <div class="container-img-servicos">
+                        <img src="img/icone-2.png" alt="icone web">
+                    </div>
+                    <div class="card-textos">
+                        <h3>Automação de processos</h3>
+                        <p>
+                            Automatizamos processos para aumentar eficiência e reduzir custos. Nossa equipe analisa seus fluxos de trabalho e identifica áreas para automatizar, ajudando a eliminar tarefas repetitivas e melhorar a produtividade. Com soluções personalizadas, simplificamos operações e liberamos tempo para que sua equipe se concentre no que realmente importa. Se você busca otimizar processos e obter mais agilidade, estamos aqui para fornecer soluções de automação eficazes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <div>
+                    <img src="img/logo.png" alt="Logo Noleto Tech">
+                </div>
+                <h2>Quem Somos?</h2>
+                <p>
+                    Somos uma empresa especializada em desenvolvimento de software e automação de processos, comprometida em fornecer soluções inovadoras e eficientes para nossos clientes. Nosso objetivo é transformar ideias em realidade, simplificando tarefas complexas e otimizando fluxos de trabalho. Com uma equipe de profissionais qualificados e uma abordagem centrada no cliente, estamos prontos para ajudar empresas de todos os tamanhos a atingir seus objetivos tecnológicos. Juntos, construímos o futuro da automação e da tecnologia.
                 </p>
             </div>
             <div>
-                <img src="img/icone-2.png" alt="ícone automações">
-                <h3>Automação de processos</h3>
+                <div>
+                    <img src="img/imagem-1.png" alt="Imagem de pessoa sorridente">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>Tecnologias</h2>
                 <p>
-                    Automatizamos processos para aumentar eficiência e reduzir custos. Nossa equipe analisa seus fluxos de trabalho e identifica áreas para automatizar, ajudando a eliminar tarefas repetitivas e melhorar a produtividade. Com soluções personalizadas, simplificamos operações e liberamos tempo para que sua equipe se concentre no que realmente importa. Se você busca otimizar processos e obter mais agilidade, estamos aqui para fornecer soluções de automação eficazes.
+                    Trabalhamos com diversas linguagens para atender a sua necessidade.
                 </p>
             </div>
-        </div>
-    </section>
+            <div>
+                <div><img src="img/logo-html5.png" alt="Logo HTML5"></div>
+                <div><img src="img/logo-c33.png" alt="Logo CSS3"></div>
+                <div><img src="img/logo-javascript.png" alt="Logo JavaScript"></div>
+                <div><img src="img/logo-phyton.png" alt="Logo Phyton"></div>
+                <div><img src="img/logo-php.png" alt="Logo PHP"></div>
+                <div><img src="img/logo-sql.png" alt="Logo SQL"></div>
+                <div><img src="img/logo-mysql.png" alt="Logo MySQL"></div>
+            </div>
+        </section>
 
-    <section>
-        <div>
+        <section>
             <div>
-                <img src="img/logo.png" alt="Logo Noleto Tech">
+                <h2>Portfólio</h2>
+                <a href="#portfolio">Ver todos os projetos</a>
             </div>
-            <h2>Quem Somos?</h2>
-            <p>
-                Somos uma empresa especializada em desenvolvimento de software e automação de processos, comprometida em fornecer soluções inovadoras e eficientes para nossos clientes. Nosso objetivo é transformar ideias em realidade, simplificando tarefas complexas e otimizando fluxos de trabalho. Com uma equipe de profissionais qualificados e uma abordagem centrada no cliente, estamos prontos para ajudar empresas de todos os tamanhos a atingir seus objetivos tecnológicos. Juntos, construímos o futuro da automação e da tecnologia.
-            </p>
-        </div>
-        <div>
             <div>
-                <img src="img/imagem-1.png" alt="Imagem de pessoa sorridente">
+                <div>
+                    <div>
+                        <img src="img/imagem-2.png" alt="">
+                    </div>
+                    <div>
+                        <img src="img/imagem-2.png" alt="">
+                    </div>
+                    <div>
+                        <img src="img/imagem-2.png" alt="">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="img/imagem-2.png" alt="">
+                    </div>
+                    <div>
+                        <img src="img/imagem-2.png" alt="">
+                    </div>
+                    <div>
+                        <img src="img/imagem-2.png" alt="">
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section>
-        <div>
-            <h2>Tecnologias</h2>
-            <p>
-                Trabalhamos com diversas linguagens para atender a sua necessidade.
-            </p>
-        </div>
-        <div>
-            <div><img src="img/logo-html5.png" alt="Logo HTML5"></div>
-            <div><img src="img/logo-c33.png" alt="Logo CSS3"></div>
-            <div><img src="img/logo-javascript.png" alt="Logo JavaScript"></div>
-            <div><img src="img/logo-phyton.png" alt="Logo Phyton"></div>
-            <div><img src="img/logo-php.png" alt="Logo PHP"></div>
-            <div><img src="img/logo-sql.png" alt="Logo SQL"></div>
-            <div><img src="img/logo-mysql.png" alt="Logo MySQL"></div>
-        </div>
-    </section>
-
-    <section>
-        <div>
-            <h2>Portfólio</h2>
-            <a href="#portfolio">Ver todos os projetos</a>
-        </div>
-        <div>
+        <section>
             <div>
+                <h2>Faça seu orçamento</h2>
+                <p>Orçamento sem compromisso.</p>
+            </div>
+            <form action="#">
                 <div>
-                    <img src="img/imagem-2.png" alt="">
+                    <label>Nome*</label>
+                    <input type="text" name="nome" placeholder="Digite o seu nome completo..." required>
                 </div>
                 <div>
-                    <img src="img/imagem-2.png" alt="">
+                    <label>Telefone*</label>
+                    <input type="tel" name="telefone" placeholder="Número com DDD" required>
                 </div>
                 <div>
-                    <img src="img/imagem-2.png" alt="">
-                </div>
-            </div>
-            <div>
-                <div>
-                    <img src="img/imagem-2.png" alt="">
+                    <label>E-mail*</label>
+                    <input type="email" name="email" placeholder="Seu E-mail" required>
                 </div>
                 <div>
-                    <img src="img/imagem-2.png" alt="">
+                    <label>Como podemos te ajudar ?*</label>
+                    <textarea name="solicitacao" placeholder="Descreva aqui os detalhes do que você deseja..." required="" cols="30" rows="5"></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+        <section>
+            <div>
+                <h2>Contato</h2>
+                <div>
+                    <img src="img/icone-whatsapp.png" alt="icone whatsapp">
+                    <p>(94) 99122-0268</p>
                 </div>
                 <div>
-                    <img src="img/imagem-2.png" alt="">
+                    <img src="img/icone-email.png" alt="icone e-mail">
+                    <p>contato@noletotech.com</p>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section>
-        <div>
-            <h2>Faça seu orçamento</h2>
-            <p>Orçamento sem compromisso.</p>
-        </div>
-        <form action="#">
             <div>
-                <label>Nome*</label>
-                <input type="text" name="nome" placeholder="Digite o seu nome completo..." required>
+                <h2>Nos siga</h2>
+                <div>
+                    <img src="img/icone-instagram.png" alt="ícone instagram">
+                    <img src="img/icone-facebook.png" alt="ícone facebook">
+                </div>
             </div>
-            <div>
-                <label>Telefone*</label>
-                <input type="tel" name="telefone" placeholder="Número com DDD" required>
-            </div>
-            <div>
-                <label>E-mail*</label>
-                <input type="email" name="email" placeholder="Seu E-mail" required>
-            </div>
-            <div>
-                <label>Como podemos te ajudar ?*</label>
-                <textarea name="solicitacao" placeholder="Descreva aqui os detalhes do que você deseja..." required="" cols="30" rows="5"></textarea>
-            </div>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
-
-    <section>
-        <div>
-            <h2>Contato</h2>
-            <div>
-                <img src="img/icone-whatsapp.png" alt="icone whatsapp">
-                <p>(94) 99122-0268</p>
-            </div>
-            <div>
-                <img src="img/icone-email.png" alt="icone e-mail">
-                <p>contato@noletotech.com</p>
-            </div>
-        </div>
-        <div>
-            <h2>Nos siga</h2>
-            <div>
-                <img src="img/icone-instagram.png" alt="ícone instagram">
-                <img src="img/icone-facebook.png" alt="ícone facebook">
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
         <p>© 2024 Todos os direitos reservados para Noleto Tech. </p>
