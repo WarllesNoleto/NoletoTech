@@ -1,0 +1,34 @@
+.tecnologias {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-03);
+    color: white;
+    padding: 70px;
+    gap: 25px;
+}
+
+.tecnologias-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tecnologias-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.container-logo-tecnologias {
+    width: 150px;
+    height: 150px;
+    background: #FFF;
+    border-radius: 40px;
+}
+
+.logo-tecnologias {
+    width: 100%;
+    height: 100%;
+}
