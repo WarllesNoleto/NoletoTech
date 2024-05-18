@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'MinhaFonte';
+    src: url('../fonts/neuropolitical.otf') format('opentype')
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-01: #9C4BBF;
+    --cor-02: #5D3B8C;
+    --cor-03: #2C2A59;
+    --cor-clara: #F2F2F2;
+    --cor-escura: #0D0D0D;
+    /* Linear-gradient: #3F336F, #5A3A8A, #1A1128 */
+
+    --fonte-principal: "Poppins", sans-serif; 
+    --fonte-titulo: 'MinhaFonte', sans-serif;
+}
+
+html {
+    font-family: var(--fonte-principal);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--fonte-titulo);
+}
